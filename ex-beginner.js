@@ -8,7 +8,7 @@ function prints(){
 prints();
 
 
-//-----------------------------------------------
+// //-----------------------------------------------
 
 
 // const nombre1 = parseFloat(prompt(" saisir le nombre1 : "));

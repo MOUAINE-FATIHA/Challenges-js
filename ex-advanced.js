@@ -1,39 +1,24 @@
-const inputGraph = prompt("Entrez le graphe");
-let graph;
-try {
-  graph = JSON.parse(inputGraph);
-} catch (e) {
-  console.log("Erreur : format JSON invalide.");
-}
-
+const inpt = prompt('saisir le graphe');
+const start = parseInt(prompt('saisir le sommet de depart:'), 10);
+const graph = JSON.parse(inpt);
 
 function breadthFirstSearch(graph, start) {
-  if (!graph.hasOwnProperty(start)) {
-    console.log("Erreur : le sommet de départ n'existe pas dans le graphe.");
-    return;
-  }
+  let alt = new Set();
+  let arr = [start];
+  let res = [];
+  while (arr.length > 0) {
+    let vertex = arr.shift();
+    if (!alt.has(vertex)) {
+      alt.add(vertex);
+      res.push(vertex);
 
-  const visited = new Set();
-  const queue = [start];
-  const result = [];
-
-  while (queue.length > 0) {
-    const vertex = queue.shift();
-
-    if (!visited.has(vertex)) {
-      visited.add(vertex);
-      result.push(vertex);
-
-      const neighbors = graph[vertex] || [];
-      for (let neighbor of neighbors) {
-        if (!visited.has(neighbor)) {
-          queue.push(neighbor);
-        }
-      }
+      let elem = graph[vertex] || [];
+      for (let el of elem) {
+        if (!alt.has(el)) {
+          arr.push(el);
+        }}
     }
   }
-  console.log("Breadth-first traversal from vertex ${start} :", result.join(", "));
+  console.log(`Breadth-first traversal starting from vertex ${start}: ${res.join(" , ")}`);
 }
-if (graph) {
-  const startNode = prompt("Entrez le sommet de départ :");
-}
+breadthFirstSearch(graph, start);

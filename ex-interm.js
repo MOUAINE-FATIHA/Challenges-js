@@ -15,7 +15,7 @@
 // console.log(`The factorial of ${nombre} is ${res}.`);
 
 
-//----------------------------------------------------------
+// //----------------------------------------------------------
 
 
 // let nombre = prompt("entrez un nombre");
@@ -44,7 +44,7 @@
 //   console.log(`${nombre} is a prime number: false`);
 
 
-//-------------------------------------------------------
+// //-------------------------------------------------------
 
 
 // const nbs = prompt("entrez une liste des nombres");
@@ -65,20 +65,20 @@
 // console.log("Sorted array in ascending order:", tri);
 
 
-//---------------------------------------------------------
+// //---------------------------------------------------------
 
 
-const ele = prompt("Entrez des chiffres");
-const tab = ele.split(' ').map(e => e.trim());
-function removeDuplicates(tab) {
-  if (!Array.isArray(tab)) {
-    console.log("c'est pas d'un tableau!");
-    return;
-  }
-  return [...new Set(tab)];
-}
-const ntab = removeDuplicates(tab);
-console.log("Array with duplicates removed:", ntab);
+// const ele = prompt("Entrez des chiffres");
+// const tab = ele.split(' ').map(e => e.trim());
+// function removeDuplicates(tab) {
+//   if (!Array.isArray(tab)) {
+//     console.log("c'est pas d'un tableau!");
+//     return;
+//   }
+//   return [...new Set(tab)];
+// }
+// const ntab = removeDuplicates(tab);
+// console.log("Array with duplicates removed:", ntab);
 
 
-//------------------------------------------------------------
+// //------------------------------------------------------------
